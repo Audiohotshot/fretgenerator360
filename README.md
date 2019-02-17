@@ -1,5 +1,6 @@
 # fretgenerator360
 Fretboard generator for guitarbuilders in Fusion360
+Author: www.Audiohotshot.nl
 
 Purpose:
 This Addin for Fusion360 is meant for making fretboards for guitars.
