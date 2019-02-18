@@ -10,7 +10,7 @@ The plugin draws a fretboard with fretlines. You can enter the scale of the fret
 Version:
 It still is in Beta-phase.
 
-Know issues: no validationcheck on negative or insane big numbers, yet. So just use realistic numbers and you'll be fine.
+Known issues: no validationcheck on negative or insane big numbers, yet. So just use realistic numbers and you'll be fine.
 
 
 Options:
