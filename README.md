@@ -12,7 +12,7 @@ It still is in big, big Beta-phase as it contains no validationcheck on negative
 Know issues: no validationcheck on negative or insane big numbers, yet. So just use realistic numbers and you'll be fine.
 
 You can enter the scale of the fretboard; it wil draw the whole board including the frets. It also draws the line for the tremolo-part 
-so you know what (when slanted) the exact direction of the trem is.
+so you know what (when slanted) the exact direction of the trem is. The plugin also draws a construction centre line. The whole fretboard is drawn on the centre of the x-axis.
 
 
 
