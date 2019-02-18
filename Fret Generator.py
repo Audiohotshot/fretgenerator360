@@ -20,20 +20,30 @@ def drawSketch(scalehigh, scalelow, fretno, fretwidth, fretoffset, dots, radius)
     xyPlane = rootComp.xYConstructionPlane
     sketch = sketches.add(xyPlane)
     
+    
+    yup = 0- fretwidth / 2
+    ydown =  fretwidth / 2
     lines = sketch.sketchCurves.sketchLines;
     # draw scalelines high and low
-    lines.addByTwoPoints(adsk.core.Point3D.create(0, 0, 0), adsk.core.Point3D.create(scalehigh, 0, 0))
-    lines.addByTwoPoints(adsk.core.Point3D.create(0 - fretoffset, fretwidth, 0), adsk.core.Point3D.create(scalelow - fretoffset, fretwidth, 0))
+    lines.addByTwoPoints(adsk.core.Point3D.create(0, yup, 0), adsk.core.Point3D.create(scalehigh, yup, 0))
+    lines.addByTwoPoints(adsk.core.Point3D.create(0 - fretoffset, ydown, 0), adsk.core.Point3D.create(scalelow - fretoffset, ydown, 0))
     #draw tremolo position line  
-    lines.addByTwoPoints(adsk.core.Point3D.create(scalehigh, 0, 0), adsk.core.Point3D.create(scalelow - fretoffset, fretwidth, 0))
-  
+    lines.addByTwoPoints(adsk.core.Point3D.create(scalehigh, yup, 0), adsk.core.Point3D.create(scalelow - fretoffset, ydown, 0))
+    #draw center construction line
+    xconstructionstart = (0 - fretoffset) / 2
+    yconstructionstart = 0
+    xconstructionend = ((scalehigh + (scalelow - fretoffset)) /2)
+    yconstructionend = 0
+    line1 = lines.addByTwoPoints(adsk.core.Point3D.create(xconstructionstart, yconstructionstart, 0), adsk.core.Point3D.create(xconstructionend, yconstructionend, 0))    
+    line1.isConstruction = True
+    
     # draw individual frets
     n = 0
     while True:
         #draw fretlines        
         distancehigh = scalehigh - (scalehigh / 2 ** (n/12))
         distancelow = scalelow - fretoffset - (scalelow / 2 ** (n/12)) 
-        lines.addByTwoPoints(adsk.core.Point3D.create(distancehigh, 0, 0), adsk.core.Point3D.create(distancelow, fretwidth, 0))        
+        lines.addByTwoPoints(adsk.core.Point3D.create(distancehigh, yup, 0), adsk.core.Point3D.create(distancelow, ydown, 0))        
         #counter        
         n = n + 1 
         if n == fretno:
@@ -50,7 +60,7 @@ def drawSketch(scalehigh, scalelow, fretno, fretwidth, fretoffset, dots, radius)
                 xcentrehigh = scalehigh - (scalehigh / 2 ** ((n-0.5)/12))
                 xcentrelow = scalelow - fretoffset - (scalelow / 2 ** ((n-0.5)/12))
                 xcentre = (xcentrehigh + xcentrelow) /2
-                ycentre = fretwidth / 2
+                ycentre = 0
                 if s == 1:
                     #draw dot
                     circles = sketch.sketchCurves.sketchCircles
@@ -65,8 +75,8 @@ def drawSketch(scalehigh, scalelow, fretno, fretwidth, fretoffset, dots, radius)
                         xcircletop= xcentrehigh
                         xcirclebottom = xcentrehigh 
                     #calculate y position dots
-                    ycircletop = fretwidth *  (1/3)
-                    ycirclebottom = fretwidth * (2/3)    
+                    ycircletop = (0 -fretwidth / 2) + (fretwidth *  (1/3))
+                    ycirclebottom = (0 -fretwidth / 2) + (fretwidth * (2/3))  
                     #draw dots
                     circles = sketch.sketchCurves.sketchCircles
                     circles.addByCenterRadius(adsk.core.Point3D.create(xcircletop, ycircletop, 0), radius)
