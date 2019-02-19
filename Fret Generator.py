@@ -90,10 +90,10 @@ def run(context):
     try:
         app = adsk.core.Application.get()
         ui  = app.userInterface
-
+        
         # Get the CommandDefinitions collection.
         cmdDefs = ui.commandDefinitions
-        
+       
         # Create a button command definition.
         buttonSample = cmdDefs.addButtonDefinition('MyButtonDefIdPython', 
                                                    'Fret Generator', 
@@ -200,8 +200,8 @@ class SampleCommandCreatedEventHandler(adsk.core.CommandCreatedEventHandler):
             app = adsk.core.Application.get()
             ui  = app.userInterface     
             # Get the commandS
-            cmd = eventArgs.command
-    
+            cmd = eventArgs.command 
+            
             # Get the CommandInputs collection to create new command inputs.            
             inputs = cmd.commandInputs
     
@@ -274,20 +274,16 @@ class SampleCommandValidateInputsHandler(adsk.core.ValidateInputsEventHandler):
             
             # Verify that the scale is greater than 0.1.
             inputarg = inputs.itemById('fretsno').value
-                   
-            if inputarg < 37 and inputarg > 0:
-                eventArgs.areInputsValid = True
+            if inputarg < 1:
+                eventArgs.areInputsValid = False
                 return
             else:
-                eventArgs.areInputsValid = False
-                
-            
-            inputarg = inputs.itemById('slantedcentre').value
-            if inputarg < 37 and inputarg > 0:
-                eventArgs.areInputsValid = True
-                return
-            else:
-                eventArgs.areInputsValid = False
+                inputarg = inputs.itemById('slantedcentre').value
+                if inputarg < 1:
+                    eventArgs.areInputsValid = False
+                    return
+                else:
+                    eventArgs.areInputsValid = True
                 
         except:
             if ui:
