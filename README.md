@@ -10,14 +10,16 @@ Author: www.Audiohotshot.nl
 # Purpose:
 This Addin for Fusion360 is meant for making fretboards for guitars.
 The plugin draws a fretboard with fretlines. You can enter the scale of the fretboard; it wil draw the whole board including the frets. It also draws the line for the tremolo-part so you know what (when slanted) the exact direction of the trem is. The plugin also draws a construction centre line. The whole fretboard is drawn on the centre of the x-axis.
+You can use this generator as a base for you guitardesign, as it draws a centre construction line. Also by selecting the whole fretboard and extruding it, you have the basis for a neck and fretboard.
+If you have like this plugin and/or have suggestions for improvements, you're welcome to let me know. Have fun drawing!
 
 # Version:
-Works fine, still is in Beta-phase though.
+Works fine.
 
-# Installation
+# Installation:
 Copy all files to your addins folder of Fusion360
 
-# Launch plugin
+# Launch plugin:
 Locate the plugin in the addin-panel of Fusion360 and press RUN.
 The plugin will stay resident in the addinpanel as long as its running.
 
@@ -30,11 +32,15 @@ The plugin will stay resident in the addinpanel as long as its running.
 - Width - the width of the fret board
 - Show dots - will reveal and draw the positiondots
 - Diameter - the diameters of the dots
-- Scale construction line centre of the fretboard
+- Draws a scale construction line in the centre of the fretboard
+- Draws a line to indicate centre and direction of bridge/tremolo
 
 This was developed on a Mac running Fusion360 and Spyder2
 
-# Disclaimer
+# Known issues:
+Use realistic numbers; negative numbers or insane big numbers do not guarantee a normal result.
+
+# Disclaimer:
 The software is made available "AS IS". It seems quite stable, but it is in
 an early stage of development.  Hence there should be plenty of bugs not yet
 spotted.
