@@ -16,7 +16,15 @@ You can use this generator as a base for you guitardesign, as it draws a centre 
 If you like this plugin and/or have suggestions for improvements, you're welcome to let me know. Have fun drawing!
 
 # Installation:
-Copy all files to your addins folder of Fusion360
+Copy all files to your Addin folder of Fusion360
+
+On Windows, these are the folder paths:
+For a script, %appdata%\Autodesk\Autodesk Fusion 360\API\Scripts
+For an Add-In, %appdata%\Autodesk\Autodesk Fusion 360\API\AddIns
+
+On macOS, these are the folder paths:
+For a script, the path is ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/Scripts.
+For an add-in, the path is ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns.
 
 # Launch plugin:
 Locate the plugin in the addin-panel of Fusion360 and press RUN.
