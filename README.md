@@ -19,11 +19,9 @@ If you like this plugin and/or have suggestions for improvements, you're welcome
 Copy all files to your Addin folder of Fusion360
 
 On Windows, these are the folder paths:
-For a script, %appdata%\Autodesk\Autodesk Fusion 360\API\Scripts
 For an Add-In, %appdata%\Autodesk\Autodesk Fusion 360\API\AddIns
 
 On macOS, these are the folder paths:
-For a script, the path is ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/Scripts.
 For an add-in, the path is ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns.
 
 # Launch plugin:
