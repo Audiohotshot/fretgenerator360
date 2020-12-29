@@ -24,7 +24,7 @@ On Windows, these are the folder paths:
 For an Add-In, %appdata%\Autodesk\Autodesk Fusion 360\API\AddIns
 
 On macOS, these are the folder paths:
-For an add-in, the path is ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns.
+For an add-in, the path is ~/Library/Application Support/Autodesk/Autodesk Fusion 360/API/AddIns
 
 # Launch plugin:
 Locate the plugin in the addin-panel of Fusion360 and press RUN.
