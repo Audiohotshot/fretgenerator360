@@ -4,6 +4,8 @@ Fretboard generator for guitarbuilders in Fusion360
 
 Author: www.Audiohotshot.nl
 
+Instruction video: https://www.youtube.com/watch?v=hlhe1uPf3LY
+
 *PLEASE DO NOT CHANGE THIS FILE, IT'S GOING TO BE OVERWRITEN ON EACH UPGRADE*
 
 # Purpose:
